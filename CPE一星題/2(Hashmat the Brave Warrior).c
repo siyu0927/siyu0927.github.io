@@ -1,3 +1,5 @@
+//第二題(Hashmat the Brave Warrior)
+
 #include<stdio.h>
 int main()
 {
