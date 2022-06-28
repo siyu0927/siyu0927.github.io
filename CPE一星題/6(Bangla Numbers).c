@@ -1,52 +1,59 @@
 //第六題(Bangla Numbers)
 
 #include<stdio.h>
-
-void f(long long a)
-{
-    if(a/10000000)
-    {
-        f(a/10000000);//回呼
-        printf(" kuti");
-        a=a%10000000;
-        if(a>0) printf(" ");
-    }
-    if(a/100000)
-    {
-        printf("%lld lakh",a/100000);
-        a=a%100000;
-        if(a>0) printf(" ");
-    }
-    if(a/1000)
-    {
-        printf("%lld hajar",a/1000);
-        a=a%1000;
-        if(a>0) printf(" ");
-    }
-    if(a/100)
-    {
-        printf("%lld shata",a/100);
-        a=a%100;
-        if(a>0) printf(" ");
-    }
-    if(a!=0) printf("%lld",a);
-}
-
 int main()
 {
-    int i=1;
-    long long a;
-
-    while(scanf("%lld",&a)!=EOF)
+    int count=1;
+    long long n;
+    while(scanf("%lld",&n)!=EOF)
     {
-        printf("%d. ",i);
-        if(a==0)
+        printf("%d. ",count);
+        if(n==0)
         {
-            printf("%lld",a);
+            printf("%d",n);
         }
-        else f(a);
+        else
+        {
+            function(n);
+        }
+        count++;
         printf("\n");
-        i++;
+    }
+
+}
+void function(long long n)
+{
+    if(n/10000000>0)
+    {
+        function(n/10000000);
+        printf(" kuti");
+        n=n%10000000;
+        if(n>0) printf(" ");
+    }
+    if(n/100000>0)
+    {
+
+        printf("%lld lakh",n/100000);
+        n=n%100000;
+        if(n>0) printf(" ");
+    }
+    if(n/1000>0)
+    {
+
+        printf("%lld hajar",n/1000);
+        n=n%1000;
+        if(n>0) printf(" ");
+    }
+    if(n/100>0)
+    {
+
+        printf("%lld shata",n/100);
+        n=n%100;
+        if(n>0) printf(" ");
+    }
+    if(n!=0)
+    {
+        printf("%lld",n);
     }
 }
 
