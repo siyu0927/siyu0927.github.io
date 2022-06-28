@@ -6,7 +6,7 @@ int main()
     int n;
     scanf("%d",&n);
     getchar();
-    char count[999]={0};
+    int count[999]={0};
     int i,m;
     char j='A';
     char str[999]={0};
@@ -14,7 +14,7 @@ int main()
     {
     gets(str);
 
-    for(i=0;i<strlen(str);i++)//轉大寫
+    for(i=0;i<=strlen(str);i++)//轉大寫
     {
         if(str[i]>='a'&&str[i]<='z')
         {
