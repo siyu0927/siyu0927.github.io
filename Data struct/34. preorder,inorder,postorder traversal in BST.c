@@ -8,7 +8,7 @@ struct Node   //這次的資料是char形式的
     struct Node* right;
 };
 
-struct Node* GetNewNode(int data)
+struct Node* GetNewNode(char data)
 {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
